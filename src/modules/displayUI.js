@@ -270,6 +270,10 @@ function displayAddProjectForm() {
     const projectTitle = document.querySelector('.project-title');
     projectTitle.textContent = "create new project";
 
+    if (document.querySelector('.delete-project')) {
+        document.querySelector('.delete-project').remove();
+    }
+    
     const description = document.querySelector('.project-description');
     description.textContent = '';
 
