@@ -1,8 +1,11 @@
 {
+  "homepage": "https://salarkhannn/github.io/TheToDo",
   "name": "thetodo",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npx webpack",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
     "watch": "webpack --watch --config webpack.config.js"
