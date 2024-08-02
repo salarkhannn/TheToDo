@@ -273,7 +273,11 @@ function displayAddProjectForm() {
     if (document.querySelector('.delete-project')) {
         document.querySelector('.delete-project').remove();
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> cde2902196747e97a5a5a33cf11e0e4bbf7ae1f4
     const description = document.querySelector('.project-description');
     description.textContent = '';
 
