@@ -1,0 +1,381 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../assets/fonts/Helvetica.ttf');
+}
+@font-face {
+    font-family: 'Helvetica-Bold';
+    src: url('../assets/fonts/Helvetica-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url("../assets/fonts/WorkSans.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'WorkSans-SemiBold';
+    src: url("../assets/fonts/WorkSans.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'WorkSans-Bold';
+    src: url("../assets/fonts/WorkSans.ttf");
+    font-weight: 700;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    background-color: rgb(250, 250, 255);
+    font-family: 'WorkSans';
+}
+
+.overlay {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.wrapper{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.wrapper .sidebar{
+    display: flex;
+    flex-direction: column;
+    background: rgb(245, 245, 250);
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    /* border-radius: 30px; */
+}
+
+.title{
+    font-family: "WorkSans-SemiBold";
+    /* font-family: "Helvetica-Bold"; */
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.wrapper .sidebar h2{
+    font-family: "WorkSans-SemiBold";
+    /* font-family: "Helvetica-Bold"; */
+    margin-left: 50px;
+    /* margin-top: 50px; */
+    /* margin-bottom: 30px; */
+}
+
+.button-list {
+    /* align-items: center; */
+    font-family: "WorkSans";
+}
+
+.tab-button{
+    font-family: "WorkSans";
+    width: 200px;
+    height: 50px;
+    text-align: start;
+    font-size: large;
+    cursor: pointer;
+    padding-left: 10px;
+
+    background: none;
+    border: none;
+}
+
+.tab-button:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+.tab-button:focus{
+    background-color: rgb(225, 225, 225);
+}
+
+
+.add-project-button{
+    font-family: "WorkSans";
+    width: 200px;
+    height: 50px;
+    margin-left: 40px;
+    text-align: start;
+    font-size: large;
+    cursor: pointer;
+    padding-left: 10px;
+    
+    background: none;
+    border: none;
+}
+
+.add-project-button:hover{
+    background-color: rgb(230, 230, 230);
+}
+.add-project-button:focus{
+    background-color: rgb(225, 225, 225);
+}
+
+.content{
+    margin-left: 400px;
+}
+
+.greeting{
+    font-family: "WorkSans-SemiBold";
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+.date{
+    font-size: 18px;
+}
+
+.project-title{
+    font-family: "WorkSans-SemiBold";
+    font-size: 36px;
+    margin-bottom: 0;
+    margin-top: 50px;
+}
+
+.project-description{
+    font-size: 18px;
+}
+
+.task-container{
+    font-family: "WorkSans";
+    margin-top: 30px;
+}
+
+.task-element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 900px;
+    height: 50px;
+}
+
+.task-element:hover {
+    background-color: rgb(245, 245, 250);
+}
+
+.task-check {
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    accent-color: rgb(0, 0, 0);
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+}
+
+.task-title {
+    font-size: 18px;
+    padding-left: 10px;
+    flex-grow: 1;
+}
+
+.task-priority {
+    padding-right: 10px;
+    width: 10px;
+    height: 10px;
+}
+
+.due-date {
+    margin-left: 10px;
+}
+
+.three-dots {
+    transform: rotate(90deg);
+    cursor: pointer;
+    transition: ease(3s);
+    padding: 10px;
+    margin-left: auto;
+}
+
+.three-dots:hover {
+    transform: rotate(90deg) scale(1.25);
+}
+
+.delete-task-button {
+    cursor: pointer;
+    margin-left: auto; /* Pushes the button to the far-right */
+    padding: 10px;
+}
+
+.delete-task-button:hover {
+    transform: scale(1.25);
+}
+
+.add-task-button{
+    cursor: pointer;
+    font-family: 'WorkSans';
+    height: 50px;
+    width: 150px;
+    font-size: 18px;
+    border: none;
+    background: none;
+}
+
+.add-task-button:hover{
+    background-color: rgb(245, 245, 250);
+}
+
+.delete-project{
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    color: rgb(250, 250, 255);
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 15px;
+    margin-top: 15px;
+
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-project:hover{
+    background-color: rgb(46, 46, 46);
+}
+
+.add-task-form{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    width: 900px;
+    height: 50px;
+    z-index: 200;
+}
+
+.task-name-input{
+    font-family: 'WorkSans';
+    height: 34px;
+    font-size: 18px;
+    margin-left: 10px;
+    flex-grow: 1;
+    margin-right: 30px;
+
+    padding-inline-start: 10px;
+
+    background: none;
+    border-style: solid;
+    border-width: 2px;
+    /* border-color: rgb(124, 124, 124); */
+    border-radius: 10px;
+}
+
+
+.priority-select{
+    cursor: pointer;
+    font-family: 'WorkSans';
+    font-size: 15px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: 10px;
+    background: none;
+    border-radius: 10px;
+    
+    border-style: solid;
+}
+
+.priority-option{
+    cursor: pointer;
+    font-family: 'WorkSans';
+    height: 40px;
+}
+
+.task-date-input{
+    cursor: pointer;
+    font-family: 'WorkSans';
+    height: 34px;
+    margin-left: auto;
+    margin-right: 10px;
+    border-radius: 10px;
+    
+    background: none;
+    border-style: solid;
+}
+
+.submit-task{
+    cursor: pointer;
+    font-family: 'WorkSans';
+    height: 40px;
+    margin-left: auto;
+    border:none;
+    border-radius: 10px;
+    color: rgb(250, 250, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+.submit-task:hover{
+    background-color: rgb(46, 46, 46);
+}
+
+.project-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.project-name{
+    width: 500px;
+    height: 50px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    background-color: rgb(245, 245, 250);
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    padding-left: 5px;
+    outline: none;
+}
+
+.project-name:focus{
+    border-color: rgb(0, 0, 0);
+}
+
+.project-desc{
+    width: 900px;
+    height: 300px;
+    font-size: 18px;
+    text-align: left top;
+    margin-bottom: 20px;
+    background-color: rgb(245, 245, 250);
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    padding-left: 5px;
+    padding-top: 5px;
+    outline: none;
+}
+
+.project-desc:focus {
+    border-color: rgb(0, 0, 0);
+}
+
+.project-create-button{
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    color: rgb(250, 250, 255);
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+}
+
+.project-create-button:hover{
+    background-color: rgb(46, 46, 46);
+}
